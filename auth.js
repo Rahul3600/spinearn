@@ -1,21 +1,3 @@
-// Firebase configuration
-// Replace with your actual Firebase project config
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-// Get references to auth and firestore
-const auth = firebase.auth();
-const db = firebase.firestore();
-
 // DOM Elements for Auth
 const authSection = document.getElementById('authSection');
 const appSection = document.getElementById('appSection');
@@ -28,6 +10,10 @@ const signupBtn = document.getElementById('signupBtn');
 const googleLoginBtn = document.getElementById('googleLoginBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const userName = document.getElementById('userName');
+
+// Get references to auth and firestore
+const auth = firebase.auth();
+const db = firebase.firestore();
 
 // Tab switching
 loginTabBtn.addEventListener('click', () => {
